@@ -9,4 +9,7 @@ class Product < ActiveRecord::Base
   validates_presence_of :price
   validates_presence_of :image_file_name
 
+  def image_path
+    "products/" + image_file_name
+  end
 end
