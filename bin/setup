@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Set up Ruby
+bundle install
+
+# Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.zshenv
+mkdir -p .git/safe
+
+# Set up database
+bundle exec rake db:setup
